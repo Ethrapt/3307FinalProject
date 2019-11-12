@@ -1,0 +1,34 @@
+CS3307 group project stage 3
+Group 3 
+Project name: Droplet
+
+For this stage of the group project, we implemented almost all of our required user stories. 
+The Status and Resets user stories have been fully implemented, and the Taring story is partially complete. 
+This is the equivalent of 2.5/7 (35%) of our user stories, or 13/28 story points (45%) 
+
+User story 1) Status
+The program reads in data from the dummy scale and updates the status every "hour" (simulated hour).
+In the future we would like this check to be done constantly, or at least more frequently than hourly.
+With all 3 status lights & the final celebration lights working, all acceptance tests have been passed for this user story.
+
+User story 2) Resets
+All working, with completed acceptance tests.
+
+User story 2) Taring. 
+Due to the roadblocks hit while building the scale, this stage does not have that hardware but reads a text file which simulates the readings that would come in from a scale (in grams). 
+The text file is formatted as such: each line is a reading, with the first being the empty bottle (used for taring). 
+The remaining values are the readings from the scale as would be read in every hour, for 15 hours (the number of hours this test case is awake for)
+There is currently no button for taring; nor is there a full scale. That is why this user story is considered only 1/2 complete.
+
+/////*****THE TEST CASE*****/////
+In this test case, we simulate a user who has a goal of 2L, stays awake for 15 hours in their day, and is not very good at staying on track.
+The text file is formatted as described above, and acts like a scale (simply contains weight values to be read)
+At the end the user still passes their goal; to test what happens if they do not, change the final two values in the file to be > 300.
+
+Future steps: 
+- accounting for the case where the user refills their water bottle
+- completing the scale
+- adding a tare button 
+- remaining user stories
+
+How to run: make default
